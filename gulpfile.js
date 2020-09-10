@@ -1,12 +1,12 @@
 // делаем переменные для каждого плагина
 let gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    rename = require('gulp-rename'),
-    browserSync = require('browser-sync'),
-    autoprefixer = require('gulp-autoprefixer'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    cssmin = require('gulp-cssmin'),
+  sass = require('gulp-sass'),
+  rename = require('gulp-rename'),
+  browserSync = require('browser-sync'),
+  autoprefixer = require('gulp-autoprefixer'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  cssmin = require('gulp-cssmin');
 
 // new task creation
 gulp.task('sass', function () {
