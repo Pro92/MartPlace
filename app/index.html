@@ -32,11 +32,13 @@
               <img class="header__img-ava" src="images/avatar.png" alt="avatar">
             </a>
           </div>
-          <div class="header__name reset-a">
-            Taofiq Hakim
-            <div class="header__balance">
+          <div class="header__info">
+            <a href="#" class="header__name reset-a">
+              Taofiq Hakim
+            </a>
+            <a href="#" class="header__balance reset-a">
               $20.45
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -173,20 +175,20 @@
     <section class="featured">
       <div class="container">
         <div class="featured__top">
-          <div class="featured__top-inner top">
-            <div class="featured__top-title">
+          <div class="top__inner">
+            <div class="top__title">
               Weekly Featured Products
             </div>
-            <div class="featured__arrows">
-              <button class="lnr lnr-chevron-left featured__prev"></button>
-              <button class="lnr lnr-chevron-right featured__next"></button>
+            <div class="top__arrows">
+              <button class="lnr lnr-chevron-left top__prev"><span class="lnr-descr">chevron-left</span></button>
+              <button class="lnr lnr-chevron-right top__next"><span class="lnr-descr">chevron-right</span></button>
             </div>
           </div>
         </div>
 
         <div class="featured__slick">
           <div class="featured__wrapper">
-            <div class="featured__bottom">
+            <article class="featured__bottom">
               <img class="featured__img" src="images/wordpress.jpg" alt="wp">
               <div class="featured__bottom-inner">
                 <div class="featured__bottom-title">
@@ -222,7 +224,7 @@
                   <div class="rate-star"></div>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <div class="featured__wrapper">
@@ -301,6 +303,49 @@
                   <span class="featured__num featured__num--color">634</span>
                   <div class="rate-star"></div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <div class="products__top featured__top">
+          <div class="products__top-inner featured__top-inner">
+            <div class="products__top-title featured__top-title">
+              Newest Release Products
+            </div>
+            <span class="products__filter">
+              Filter by:
+            </span>
+            <button class="products__top-btn reset-btn">
+              <img class="products__dots" src="images/icons/dots.png" alt="dots">
+            </button>
+          </div>
+        </div>
+
+        <div class="products__middle">
+          <div class="products__middle-inner">
+            <button class="products__middle-btn products__middle-btn--size-1">Plugins</button>
+            <button class="products__middle-btn products__middle-btn--size-2">WordPress</button>
+            <button class="products__middle-btn products__middle-btn--size-3">Site Template</button>
+            <button class="products__middle-btn products__middle-btn--size-4">PSD Template</button>
+            <button class="products__middle-btn products__middle-btn--size-1">Joomla</button>
+            <button class="products__middle-btn products__middle-btn--size-4">User Interface</button>
+            <button class="products__middle-btn products__middle-btn--size-3">Landing Page</button>
+            <button class="products__middle-btn products__middle-btn--size-5">Software</button>
+          </div>
+        </div>
+
+        <div class="products__bottom">
+          <div class="products__bottom-inner">
+            <div class="products__bottom-item">
+              <div class="products__item-top">
+                <img src="images/products-img.jpg" alt="" class="products__item-img">
+                <a href="#" class="products__item-link products__item-link--pos reset-a">More Info</a>
+                <a href="#" class="products__item-link products__item-link--pos-2 reset-a">Live Demo</a>
               </div>
             </div>
           </div>

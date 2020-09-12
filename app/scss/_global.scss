@@ -29,6 +29,10 @@ body {
   display: inline-block;
 }
 
+.reset-btn {
+  padding: 0;
+}
+
 .container {
   max-width: 1170px;
   padding: 0 15px;
@@ -45,3 +49,8 @@ body {
 .lnr-descr {
   font-size: 0;
 }
+
+.jq-ry-container {
+  padding: 0;
+}
+
