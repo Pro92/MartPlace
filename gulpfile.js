@@ -11,28 +11,34 @@ let gulp = require('gulp'),
 // new task creation
 gulp.task('sass', function () {
   //  путь для scss
-  return gulp.src('app/scss/style.scss')                             
-    .pipe(sass({ outputStyle: 'expanded' }))  // or compressed                                 
-    .pipe(rename({ suffix: '.min' }))  // if compressed
+  return gulp.src('app/scss/**/*.scss')
+    .pipe(sass({
+      outputStyle: 'expanded'
+    })) // or compressed                                 
+    .pipe(rename({
+      suffix: '.min'
+    })) // if compressed
     //  пайп для авторпефиксера,так как мы пишем на sass/scss, добавляем сюда
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 8 versions']    
+      overrideBrowserslist: ['last 8 versions']
     }))
     // путь для того куда будет отправляться сконвертированый scss.
     .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 });
 
 // 
-gulp.task('style', function() {
+gulp.task('style', function () {
   return gulp.src([
-    
-    'node_modules/swiper/swiper-bundle.css',
-    'node_modules/normalize.css/normalize.css',
-    'node_modules/slick-carousel/slick/slick.css',
-    'node_modules/magnific-popup/dist/magnific-popup.css',
-    'node_modules/rateyo/src/jquery.rateyo.css'
-  ])
+
+      'node_modules/swiper/swiper-bundle.css',
+      'node_modules/normalize.css/normalize.css',
+      'node_modules/slick-carousel/slick/slick.css',
+      'node_modules/magnific-popup/dist/magnific-popup.css',
+      'node_modules/rateyo/src/jquery.rateyo.css'
+    ])
     .pipe(concat('libs.min.css'))
     // минифицируем сss с помощью cssmin плагина
     .pipe(cssmin())
@@ -41,14 +47,15 @@ gulp.task('style', function() {
 });
 
 // конкатинируем оба плагина в одну либу
-gulp.task('script', function(){
+gulp.task('script', function () {
   return gulp.src([
 
-    'node_modules/swiper/swiper-bundle.js',
-    'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-    'node_modules/rateyo/src/jquery.rateyo.js'
-  ])
+      'node_modules/swiper/swiper-bundle.js',
+      'node_modules/slick-carousel/slick/slick.js',
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+      'node_modules/rateyo/src/jquery.rateyo.js',
+      'node_modules/mixitup/dist/mixitup.js'
+    ])
     .pipe(concat('libs.min.js'))
     // минифицируем с помощью uglify
     .pipe(uglify())
@@ -57,30 +64,34 @@ gulp.task('script', function(){
 });
 
 //  таск для всех html файлов,для браузерсинка
-gulp.task('html', function(){
+gulp.task('html', function () {
   return gulp.src('app/*.html')
-  .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 
 });
 
 //  таск для всех js файлов,для браузерсинка
-gulp.task('js', function(){
+gulp.task('js', function () {
   return gulp.src('app/js/*.js')
-  .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 });
 
 // таск самого браузерсинка из доки,добавляем свой путь вида "app/"
-gulp.task('browser-sync', function(){
+gulp.task('browser-sync', function () {
   browserSync.init({
-      server: {
-          baseDir: "app/"
-      }
+    server: {
+      baseDir: "app/"
+    }
   });
 });
 
 // таск для watch, наблюдает за изменениями всех файлов html,js,sass/scss.
-gulp.task('watch', function(){
-  gulp.watch('app/scss/style.scss', gulp.parallel('sass'))
+gulp.task('watch', function () {
+  gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))
   gulp.watch('app/*.html', gulp.parallel('html'))
   gulp.watch('app/js/*.js', gulp.parallel('js'))
 });

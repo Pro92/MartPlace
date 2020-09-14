@@ -29,10 +29,6 @@ body {
   display: inline-block;
 }
 
-.reset-btn {
-  padding: 0;
-}
-
 .container {
   max-width: 1170px;
   padding: 0 15px;
@@ -50,7 +46,165 @@ body {
   font-size: 0;
 }
 
+.lnr-cart--color {
+  background-color: transparent;
+  border: transparent;
+  color: $blue;
+  margin-right: 0;
+  padding: 0;
+  cursor: pointer;
+  outline-color: $blue;
+  transition: all 0.3s;
+  font-size: 15px;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+  }
+}
+
+.lnr-cart--m {
+  margin-left: auto;
+}
+
+.lnr-default {
+  &::after {
+    font-size: 14px;
+    padding-top: 3px;
+    position: absolute;
+    right: -17px;
+    top: -15px;
+    content: '25';
+    width: 26px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: #ff6a6c;
+    color: #ffffff;
+    @include f500;
+  }
+}
+
+
+.lnr-envelope::after {
+  content: '6';
+  background-color: #62d03b;
+}
+
+.lnr-cart--icon::after {
+  content: '2';
+  background-color: $blue;
+}
+
 .jq-ry-container {
   padding: 0;
 }
 
+.slick-disabled {
+  cursor: default;
+}
+
+.link {
+  max-width: 190px;
+  width: 100%;
+  min-height: 55px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 28px;
+  border: 1px solid #ffffff;
+  margin-right: 30px;
+  color: #ffffff;
+  padding: 17px 30px;
+  transition: all 0.5s;
+
+  &:hover {
+    color: $blue;
+    background-color: #ffffff;
+    transition: all 0.5s;
+  }
+
+  &:focus {
+    transition: none;
+    outline-color: $blue;
+  }
+}
+
+.box {
+  &__top {
+    min-height: 110px;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 30px;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: #000000;
+    max-width: 700px;
+  }
+
+  &__arrows {
+    border: 0;
+    width: 110px;
+    height: 45px;
+    border-radius: 23px;
+    background-color: $viol;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+      transition: all 0.3s;
+    }
+
+    &:active {
+      background-color: #551cb6;
+    }
+  }
+
+  &__prev,
+  &__next {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    outline-color: $viol;
+  }
+
+  &__prev {
+    bottom: -14px;
+    left: 16px;
+  }
+
+  &__next {
+    right: -40px;
+    bottom: -14px;
+  }
+}
+
+.lnr-heart {
+  color: $viol;
+  font-size: 15px;
+  font-weight: 500;
+  vertical-align: middle;
+  background-color: transparent;
+  border: transparent;
+  margin-right: 0;
+  padding: 0;
+  cursor: pointer;
+  outline-color: $viol;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+  }
+}
