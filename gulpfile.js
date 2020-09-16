@@ -12,21 +12,13 @@ let gulp = require('gulp'),
 gulp.task('sass', function () {
   //  путь для scss
   return gulp.src('app/scss/**/*.scss')
-    .pipe(sass({
-      outputStyle: 'expanded'
-    })) // or compressed                                 
-    .pipe(rename({
-      suffix: '.min'
-    })) // if compressed
+    .pipe(sass({outputStyle: 'compressed'})) // or compressed                                 
+    .pipe(rename({suffix: '.min'})) // if compressed
     //  пайп для авторпефиксера,так как мы пишем на sass/scss, добавляем сюда
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 8 versions']
-    }))
+    .pipe(autoprefixer({overrideBrowserslist: ['last 8 versions']}))
     // путь для того куда будет отправляться сконвертированый scss.
     .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+    .pipe(browserSync.reload({stream: true}))
 });
 
 // 
