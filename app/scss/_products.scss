@@ -1,8 +1,5 @@
 .products {
 
-  padding: 120px 0;
-  background-color: #eff1f5;
-
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -164,11 +161,16 @@
     padding: 5px 8px 0;
     margin-right: 7px;
     transition: all 0.5s;
+    @include reset-a;
 
     &:hover {
       background-color: #858d97;
       color: #ffffff;
     }
+  }
+
+  &__linked {
+    @include reset-a;
   }
 
   &__tags {
@@ -219,6 +221,7 @@
     font-size: 15px;
     color: #ffffff;
     @include f500;
+    @include reset-a;
     padding: 7px 3px;
     margin-right: 19px;
     outline-color: $blue;
