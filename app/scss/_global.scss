@@ -78,6 +78,15 @@ body {
   display: block;
 }
 
+
+.lnr-clock {
+  font-size: 15px;
+  color: $blue;
+  display: inline-block;
+  padding-top: 3px;
+  margin-right: 8px;
+}
+
 .lnr-briefcase {
   color: #feb71d;
 }
@@ -126,6 +135,18 @@ body {
   &:hover {
     transform: scale(1.25);
   }
+
+  &--m {
+    font-size: 15px;
+    color: #7e7e7e;
+    display: block;
+  }
+}
+
+.lnr-eye {
+  font-size: 15px;
+  color: #7e7e7e;
+  
 }
 
 .lnr-chevron-left,

@@ -3,7 +3,7 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 
   &__inner {
@@ -17,6 +17,10 @@
     &--m {
       flex-direction: column;
       margin-bottom: 31px;
+    }
+
+    &--pos {
+      margin-top: 60px;
     }
   }
 
@@ -78,7 +82,8 @@
     max-width: 590px;
     width: 100%;
     max-height: 452px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     box-shadow: 0 2px 30px rgba(147, 155, 168, 0.1);
     border-radius: 0 4px 4px 0;
     background-color: #ffffff;
@@ -86,12 +91,20 @@
 
     &--m {
       max-width: 361px;
-      max-height: 303px;
-      overflow-y: auto;
+      max-height: 294px;
       width: 100%;
       padding: 30px 30px 16px 30px;
       box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
     }
+
+    &--size {
+      max-width: 361px;
+      width: 100%;
+      max-height: 242px;
+      padding: 27px 21px 14px 28px;
+      box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    }
+
   }
 
   &__title {
@@ -102,6 +115,12 @@
 
     &--m {
       font-size: 20px;
+    }
+
+    &--font {
+      font-size: 22px;
+      margin-bottom: 30px;
+      @include f500;
     }
   }
 
@@ -146,7 +165,7 @@
     &--m {
       max-width: 292px;
       width: 100%;
-      line-height: 30px;
+     
     }
   }
 
@@ -199,6 +218,7 @@
 
     &--m {
       margin-top: 0;
+     
       &::after {
         content: '';
         max-width: 361px;
@@ -207,8 +227,50 @@
         position: absolute;
         top: -15px;
         left: -30px;
-       
+
       }
+    }
+
+    &--pos {
+      padding-top: 5px;
+    }
+
+    &--p {
+      padding-top: 7px;
+      
+      &::after {
+        content: '';
+        max-width: 361px;
+        height: 1px;
+        background-color: #ececec;
+        position: absolute;
+        top: -13px;
+        left: -30px;
+
+      }
+    }
+  }
+
+  &__descr-btn {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 7px;
+    transition: all 0.5s;
+    cursor: pointer;
+    outline: transparent;
+    &--m {
+      margin-left: auto;
+    }
+
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(131, 133, 148, 0.4);
+    }
+
+    &:hover {
+      transform: scale(1.25);
     }
   }
 
@@ -270,5 +332,22 @@
     background-color: $blue;
     cursor: pointer;
   }
+
+  &__time {
+    font-size: 15px;
+    color: #7e7e7e;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -50px;
+      top: -13px;
+      width: 1px;
+      height: 40px;
+      background-color: #ececec;
+    }
+  }
+
 
 }
