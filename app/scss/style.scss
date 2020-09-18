@@ -581,7 +581,7 @@
 
   .swiper-slide-next,
   .swiper-slide-prev,
-  .swiper-slide-active{
+  .swiper-slide-active {
     margin-top: 60px;
   }
 
@@ -707,13 +707,86 @@
 //end feedback section
 
 
-// start news section
 
-.news {
-  padding: 120px 0;
-  background-color: #eff1f5;
-  
-} 
+//start support section
+.support {
+  padding: 60px 0;
+  min-height: 297px;
 
+  &__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
 
-//end news section
+    &::after {
+      content: '';
+      position: absolute;
+      right: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 297px;
+      background-color: #e8eaf3;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto 32px;
+  }
+
+  &__descr {
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+  }
+
+  &__word {
+    color: $blue;
+  }
+
+  &__word-2 {
+    color: $viol;
+  }
+}
+
+//end support section
+
+// start join section
+.join {
+  padding: 110px 0;
+  min-height: 400px;
+  background-color: #151a20;
+  background: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
+  opacity: 1;
+
+  &__box {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: #e7e7e7;
+    margin-bottom: 50px;
+  }
+
+  &__link {
+    background-color: #ffffff;
+    color: $blue;
+    transition: all 0.5s;
+    border: 0;
+    padding: 20px 44px;
+    &:hover {
+      background-color: $blue;
+      color: #ffffff;
+    }
+  }
+}
+
+//end join section
