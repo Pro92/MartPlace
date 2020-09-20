@@ -34,8 +34,8 @@ body {
 .news {
   padding: 120px 0;
   background-color: #eff1f5;
-  
-} 
+
+}
 
 //styles for icons
 .lnr {
@@ -58,6 +58,23 @@ body {
 
 .lnr-envelope {
   margin-right: 30px;
+
+  &--m {
+    color: #ffffff;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    font-size: 15px;
+  }
+}
+
+.lnr-map-marker {
+  color: #ffffff;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: super;
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
 .lnr-cart {
@@ -91,6 +108,14 @@ body {
   display: inline-block;
   padding-top: 3px;
   margin-right: 8px;
+}
+
+.lnr-phone-handset {
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  font-size: 15px;
 }
 
 .lnr-briefcase {
@@ -152,7 +177,7 @@ body {
 .lnr-eye {
   font-size: 15px;
   color: #7e7e7e;
-  
+
 }
 
 .lnr-chevron-left,
@@ -313,14 +338,15 @@ body {
   &__item {
     margin-bottom: 121px;
     max-width: 360px;
-    min-height: 403px;
+    max-height: 420px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 29px 49px;
     transition: all 0.5s;
     position: relative;
-   
+
     &::before {
       content: '';
       background-image: url('../images/adv_1.jpg');
@@ -351,8 +377,8 @@ body {
       background-color: #ffffff;
       margin-bottom: 30px;
       padding: 32px 30px 59px;
-      min-height: 373px;
-
+      max-height: 393px;
+    
       &::before {
         display: none;
       }
