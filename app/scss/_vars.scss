@@ -30,3 +30,7 @@ $black: #333333;
 @mixin reset-li {
   display: inline-block;
 }
+
+@mixin reset-p {
+  margin-top: 0;
+}

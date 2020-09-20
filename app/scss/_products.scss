@@ -22,6 +22,10 @@
     &--pos {
       margin-top: 60px;
     }
+
+    &--mb {
+      margin-bottom: 0;
+    }
   }
 
   &__img {
@@ -332,8 +336,8 @@
 
   &__time {
     font-size: 15px;
-    color: #7e7e7e;
     position: relative;
+   
 
     &::after {
       content: '';
@@ -343,6 +347,15 @@
       width: 1px;
       height: 40px;
       background-color: #ececec;
+    }
+  }
+
+  &__time-link {
+    @include reset-a;
+    color: #7e7e7e;
+    &:hover {
+      color: $blue;
+      text-decoration: underline;
     }
   }
 

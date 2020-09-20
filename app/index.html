@@ -114,13 +114,13 @@
           <div class="hero-default  hero__subtitle">
             Digital Product Marketplace
           </div>
-          <div class="hero__text">
+          <p class="hero__text">
             MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
-          </div>
+          </p>
           <a href="#" class="hero__link  link">
             View All Products
           </a>
-          <a href="#" class="hero__link  link">
+          <a href="#" class="hero__link-2  link">
             Popular Products
           </a>
         </div>
@@ -375,6 +375,33 @@
               </span>
               <span class="box__filter-dots"></span>
             </button>
+            <ul class="box__list">
+              <li class="box__list-item">
+                <button class="box__list-btn" type="button">
+                  Trending items
+                </button>
+              </li>
+              <li class="box__list-item">
+                <button class="box__list-btn" type="button">
+                  Best seller
+                </button>
+              </li>
+              <li class="box__list-item">
+                <button class="box__list-btn" type="button">
+                  Best rating
+                </button>
+              </li>
+              <li class="box__list-item">
+                <button class="box__list-btn" type="button">
+                  Low price
+                </button>
+              </li>
+              <li class="box__list-item">
+                <button class="box__list-btn" type="button">
+                  High price
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -676,7 +703,7 @@
           <div class="slider-wrap">
             <article class="products">
               <div class="products__wrapper">
-                <div class="products__inner  products__inner--m">
+                <div class="products__inner  products__inner--m  products__inner--mb">
                   <img class="products__img  products__img--m" src="images/products-img.jpg" alt="wp">
                   <div class="products__img-extra">
                     <a class="link  products__img-link" href="#">More Info</a>
@@ -716,7 +743,7 @@
                   </div>
                 </div>
 
-                <div class="products__inner  products__inner--m">
+                <div class="products__inner  products__inner--m  products__inner--mb">
                   <img class="products__img  products__img--m" src="images/products-img.jpg" alt="wp">
                   <div class="products__img-extra">
                     <a class="link  products__img-link" href="#">More Info</a>
@@ -755,7 +782,7 @@
                   </div>
                 </div>
 
-                <div class="products__inner  products__inner--m">
+                <div class="products__inner  products__inner--m  products__inner--mb">
                   <img class="products__img  products__img--m" src="images/products-img.jpg" alt="wp">
                   <div class="products__img-extra">
                     <a class="link  products__img-link" href="#">More Info</a>
@@ -1227,8 +1254,8 @@
           </div>
         </div>
         <div class="offers__box offers__box--m">
-          <div class="offers__item">
-            <img class="offers__img" src="images/buy_img.svg" alt="buy">
+          <div class="offers__item offers__item--m">
+            <img class="offers__img offers__img--m" src="images/buy_img.svg" alt="buy">
             <div class="offers__title">
               Start Shopping Today
             </div>
@@ -1404,7 +1431,9 @@
                     </span>
                   </span>
                   <time class="products__time">
-                    24 Feb 2017
+                    <a class="products__time-link" href="#">
+                      24 Feb 2017
+                    </a>
                   </time>
                   <a class="products__descr-btn products__descr-btn--m" href="#">
                     <span class="lnr  lnr-bubble  lnr-bubble--m">
@@ -1447,7 +1476,9 @@
                     </span>
                   </span>
                   <time class="products__time">
-                    15 Mar 2017
+                    <a class="products__time-link" href="#">
+                      15 Mar 2017
+                    </a>
                   </time>
                   <a class="products__descr-btn products__descr-btn--m" href="#">
                     <span class="lnr  lnr-bubble  lnr-bubble--m">
@@ -1491,7 +1522,9 @@
                     </span>
                   </span>
                   <time class="products__time">
-                    20 Dec 2016
+                    <a class="products__time-link" href="#">
+                      24 Dec 2016
+                    </a>
                   </time>
                   <a class="products__descr-btn products__descr-btn--m" href="#">
                     <span class="lnr  lnr-bubble  lnr-bubble--m">
@@ -1522,7 +1555,7 @@
       <div class="container">
         <div class="support__item">
           <div class="support__descr">
-            <img src="images/money.png" alt="money" class="support__image">
+            <img class="support__image" src="images/money.png" alt="money">
             30 Days Money Back <span class="support__word">Guarantee</span>
           </div>
           <div class="support__descr">
@@ -1567,7 +1600,7 @@
                 <span class="lnr lnr-phone-handset">
                   <span class="lnr-descr">phone</span>
                 </span>
-              
+
                 <a class="footer__col-number  col-default" href="tel:67898752235">Phone: +6789-875-2235</a>
               </div>
               <div class="footer__col-email">
@@ -1630,9 +1663,9 @@
               Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!
             </div>
             <form class="header__form footer__col-form" action="#">
-                <input class="header__search  footer__col-input" type="email" placeholder="Enter email"
-                  name="email" required>
-                <span class="speak">Enter email</span>
+              <input class="header__search  footer__col-input" type="email" placeholder="Enter email" name="email"
+                required>
+              <span class="speak">Enter email</span>
               <button class="header__search-btn  footer__col-btn" type="submit">
                 Submit
               </button>

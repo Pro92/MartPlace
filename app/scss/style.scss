@@ -233,12 +233,14 @@
 
   &__inner {
     text-align: center;
-    padding-top: 185px;
+    padding-top: 170px;
+
   }
 
   &__subtitle {
     font-weight: 700;
-    margin-bottom: 38px;
+    margin-bottom: 32px;
+
   }
 
   &__text {
@@ -246,10 +248,22 @@
     font-weight: 500;
     color: #f3f3f8;
     margin-bottom: 68px;
+    margin-top: 0;
+
   }
 
   &__box {
     position: relative;
+  }
+
+  &__link {
+    margin-right: 19px;
+    padding: 17px 32px;
+  }
+
+  &__link-2 {
+    margin-right: 0;
+    margin-left: 10px;
   }
 
   &__box-inner {
@@ -260,7 +274,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border-radius: 6px;
     position: absolute;
-    bottom: -285px;
+    bottom: -301px;
 
     &::after,
     &::before {
@@ -465,7 +479,7 @@
     text-align: center;
     font-size: 36px;
     color: #000000;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
 
     &--m {
       color: $blue;
@@ -521,13 +535,18 @@
   &__img {
     margin-bottom: 49px;
     max-width: 120px;
-    min-height: 120px;
+    min-height: 101px;
+
+    &--m {
+      max-width: 100px;
+      min-height: 100px;
+    }
   }
 
   &__title {
     font-size: 36px;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 27px;
   }
 
   &__subtitle {
@@ -733,10 +752,10 @@
   &__image {
     display: block;
     margin: 0 auto 32px;
+
   }
 
   &__descr {
-    text-align: center;
     font-size: 24px;
     color: #000000;
   }
@@ -749,6 +768,7 @@
     color: $viol;
   }
 }
+
 
 //end support section
 
@@ -767,13 +787,15 @@
   &__title {
     font-size: 36px;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
+    line-height: 28px;
   }
 
   &__subtitle {
     font-size: 18px;
     color: #e7e7e7;
     margin-bottom: 50px;
+    line-height: 30px;
   }
 
   &__link {
@@ -781,7 +803,8 @@
     color: $blue;
     transition: all 0.5s;
     border: 0;
-    padding: 20px 44px;
+    padding: 17px 44px 20px 44px;
+    margin-right: 0;
 
     &:hover {
       background-color: $blue;
@@ -874,6 +897,7 @@
     color: #ffffff;
     letter-spacing: 1px;
     margin-bottom: 30px;
+
     &--m {
       margin-top: 10px;
     }
@@ -898,7 +922,7 @@
 
   &__col-4 {
     max-width: 361px;
-    
+
   }
 
   &__col-form {

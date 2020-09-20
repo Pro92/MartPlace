@@ -15,6 +15,14 @@ $(function () {
     appendArrows: '.arrows-wrapper'
   });
 
+  $('.box__btn').click(function(){
+    $('.box__btn, .box__list').toggleClass('active');
+  });
+
+  $('.box__list').click(function(){
+    $('.box__btn, .box__list').removeClass('active');
+  });
+
   
 
   $(".rate-star").rateYo({
