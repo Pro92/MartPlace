@@ -8,19 +8,19 @@ $(function () {
     
   });
 
-  $('.products-slider').slick({
-    prevArrow: '<button type="button" class="slick-arrow slick-arrow--m slick-arrow--prev"><span class="lnr lnr-chevron-left"></span></button>',
-    nextArrow: '<button type="button" class="slick-arrow slick-arrow--m slick-arrow--next"><span class="lnr lnr-chevron-right"></span></button>',
+  $('.goods-slider').slick({
+    prevArrow: '<button type="button" class="slick-arrow slick-arrow--color slick-arrow--prev"><span class="lnr lnr-chevron-left"></span></button>',
+    nextArrow: '<button type="button" class="slick-arrow slick-arrow--color slick-arrow--next"><span class="lnr lnr-chevron-right"></span></button>',
     infinite: false,
     appendArrows: '.arrows-wrapper'
   });
 
-  $('.box__btn').click(function(){
-    $('.box__btn, .box__list').toggleClass('active');
+  $('.box__button').click(function(){
+    $('.box__button, .box__list').toggleClass('active');
   });
 
   $('.box__list').click(function(){
-    $('.box__btn, .box__list').removeClass('active');
+    $('.box__button, .box__list').removeClass('active');
   });
 
   

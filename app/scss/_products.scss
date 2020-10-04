@@ -10,20 +10,111 @@
     position: relative;
     display: flex;
 
-    &:nth-child(n + 4) {
+    &--small {
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      &:nth-child(n + 4) {
+        margin-bottom: 0;
+      }
+
+      .products__img {
+        max-width: 361px;
+        min-height: 230px;
+        object-fit: cover;
+        border-radius: 4px 4px 0 0;
+      }
+
+      .products__link {
+        min-width: 60px;
+        max-width: 100px;
+        min-height: 30px;
+        border-radius: 15px;
+        background-color: rgba($blue, 0.1);
+        color: $blue;
+        padding: 7px 8px;
+        margin-right: 17px;
+      }
+
+      .products__descr {
+        margin-top: 0;
+
+        &::after {
+          content: '';
+          max-width: 361px;
+          height: 1px;
+          background-color: #ececec;
+          position: absolute;
+          top: -15px;
+          left: -30px;
+        }
+      }
+
+      .products__content {
+        max-width: 361px;
+        min-height: 299px;
+        max-height: 299px;
+        width: 100%;
+        padding: 24px 30px 16px 26px;
+        box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+
+        &--small {
+          min-height: 245px;
+          max-height: 245px;
+          padding: 27px 21px 14px 28px;
+        }
+      }
+
+      .products__title {
+        font-size: 20px;
+
+        &--medium {
+          font-size: 22px;
+          margin-bottom: 21px;
+          @include f500;
+        }
+      }
+
+      .products__text {
+        margin-bottom: 46px;
+        max-width: 292px;
+      }
+
+      .products__img-extra {
+        max-width: 361px;
+        min-height: 230px;
+        border-radius: 4px 4px 0 0;
+      }
+
+      .products__descr-btn {
+        margin-left: auto;
+        @include reset-a;
+
+        transition: all 0.5s;
+        outline: transparent;
+
+        &:focus {
+          box-shadow: 0 0 0 2px rgba(131, 133, 148, 0.4);
+        }
+
+        &:hover {
+          transform: scale(1.25);
+        }
+      }
+
+      .products__descr-watch {
+        margin-left: 30px;
+        margin-right: 7px;
+      }
+    }
+
+
+    &--position {
+      margin-top: 60px;
       margin-bottom: 0;
     }
 
-    &--m {
-      flex-direction: column;
-      margin-bottom: 31px;
-    }
-
-    &--pos {
-      margin-top: 60px;
-    }
-
-    &--mb {
+    &--margin {
       margin-bottom: 0;
     }
   }
@@ -33,42 +124,29 @@
     min-height: 452px;
     object-fit: cover;
     border-radius: 4px 0 0 4px;
-
-    &--m {
-      max-width: 361px;
-      min-height: 230px;
-      object-fit: cover;
-      border-radius: 4px 4px 0 0;
-    }
   }
 
   &__img-extra {
+    max-width: 555px;
+    min-height: 452px;
     position: absolute;
     left: 0;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 361px;
     width: 100%;
-    min-height: 230px;
+    border-radius: 4px 0 0 4px;
     background: linear-gradient(to left, #0674ec 0%, #7347c1 100%);
     overflow: hidden;
     opacity: 0;
     transition: all 0.5s;
     cursor: pointer;
-    border-radius: 4px 4px 0 0;
 
     &:hover {
       opacity: 1;
-
     }
 
-    &--m {
-      max-width: 555px;
-      min-height: 452px;
-      border-radius: 4px 0 0 4px;
-    }
   }
 
   &__img-link {
@@ -91,47 +169,20 @@
     box-shadow: 0 2px 30px rgba(147, 155, 168, 0.1);
     border-radius: 0 4px 4px 0;
     background-color: #ffffff;
-    padding: 50px 50px 24px 50px;
-
-    &--m {
-      max-width: 361px;
-      max-height: 294px;
-      width: 100%;
-      padding: 30px 30px 16px 30px;
-      box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
-    }
-
-    &--size {
-      max-width: 361px;
-      width: 100%;
-      max-height: 242px;
-      padding: 27px 21px 14px 28px;
-      box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
-    }
-
+    padding: 46px 50px 24px 46px;
   }
 
   &__title {
     color: #000000;
     font-size: 24px;
     @include f700;
-    margin-bottom: 15px;
-
-    &--m {
-      font-size: 20px;
-    }
-
-    &--font {
-      font-size: 22px;
-      margin-bottom: 30px;
-      @include f500;
-    }
+    margin-bottom: 14px;
   }
 
   &__subtitle {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 
   &__icon {
@@ -162,15 +213,10 @@
   }
 
   &__text {
+    @include reset-p;
     color: $grey;
-    line-height: 27px;
-    margin-bottom: 40px;
-
-    &--m {
-      max-width: 292px;
-      width: 100%;
-     
-    }
+    line-height: 29px;
+    margin-bottom: 36px;
   }
 
   &__links {
@@ -220,58 +266,20 @@
       top: -25px;
     }
 
-    &--m {
-      margin-top: 0;
-     
-      &::after {
-        content: '';
-        max-width: 361px;
-        height: 1px;
-        background-color: #ececec;
-        position: absolute;
-        top: -15px;
-        left: -30px;
 
-      }
-    }
-
-    &--pos {
+    &--mini {
       padding-top: 5px;
-    }
 
-    &--p {
-      padding-top: 7px;
-      
       &::after {
         content: '';
         max-width: 361px;
         height: 1px;
         background-color: #ececec;
         position: absolute;
-        top: -13px;
+        top: -11px;
         left: -30px;
 
       }
-    }
-  }
-
-  &__descr-btn {
-    @include reset-a;
-    margin-left: 30px;
-    margin-right: 7px;
-    transition: all 0.5s;
-    outline: transparent;
-    &--m {
-      margin-left: auto;
-    }
-
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(131, 133, 148, 0.4);
-    }
-
-    &:hover {
-      transform: scale(1.25);
     }
   }
 
@@ -286,7 +294,7 @@
     @include f500;
     @include reset-a;
     padding: 7px 3px;
-    margin-right: 19px;
+    margin-right: 25px;
     outline-color: $blue;
     transition: all 0.5s;
 
@@ -294,17 +302,6 @@
       background-color: #0030de;
       color: #ffffff;
     }
-
-    &--m {
-      min-width: 60px;
-      max-width: 100px;
-      min-height: 30px;
-      border-radius: 15px;
-      background-color: rgba($blue, 0.1);
-      color: $blue;
-      padding: 7px 8px;
-    }
-
   }
 
   &__num {
@@ -319,7 +316,7 @@
   &__num--color {
     color: $blue;
     font-size: 15px;
-    margin-right: 0;
+    margin-right: -4px;
 
   }
 
@@ -327,17 +324,22 @@
     margin-left: auto;
   }
 
+  .rate__star-card {
+    margin-left: 8px;
+  }
+
   &__btn {
     display: block;
-    margin: 60px auto 0;
+    margin: 55px auto 0;
     background-color: $blue;
     cursor: pointer;
+    padding: 19px 32px;
   }
 
   &__time {
     font-size: 15px;
     position: relative;
-   
+
 
     &::after {
       content: '';
@@ -353,6 +355,7 @@
   &__time-link {
     @include reset-a;
     color: #7e7e7e;
+
     &:hover {
       color: $blue;
       text-decoration: underline;

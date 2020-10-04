@@ -1,12 +1,12 @@
 // делаем переменные для каждого плагина
 let gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  rename = require('gulp-rename'),
-  browserSync = require('browser-sync'),
-  autoprefixer = require('gulp-autoprefixer'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  cssmin = require('gulp-cssmin');
+    sass = require('gulp-sass'),
+    rename = require('gulp-rename'),
+    browserSync = require('browser-sync'),
+    autoprefixer = require('gulp-autoprefixer'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    cssmin = require('gulp-cssmin');
 
 // new task creation
 gulp.task('sass', function () {
@@ -37,6 +37,13 @@ gulp.task('style', function () {
     //выкидываем результат в папку css
     .pipe(gulp.dest('app/css'))
 });
+
+// gulp.task('main', function () {
+//   return gulp.src('app/js/main.js')
+//   .pipe(uglify())
+//   .pipe(rename({ suffix: '.min' }))
+//   .pipe(gulp.dest('app/js'))
+// });
 
 // конкатинируем оба плагина в одну либу
 gulp.task('script', function () {

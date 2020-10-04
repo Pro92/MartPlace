@@ -2,9 +2,10 @@ $blue: #0674ec;
 $viol: #7347c1;
 $grey: #555555;
 $black: #333333;
+$lowgrey: #54667a;
 
 
-@mixin f500 {
+ @mixin f500 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
 }
@@ -17,8 +18,8 @@ $black: #333333;
 
 
 @mixin reset-a {
-    text-decoration: none;
-    display: inline-block;
+  text-decoration: none;
+  display: inline-block;
 }
 
 @mixin reset-ul {
@@ -32,5 +33,7 @@ $black: #333333;
 }
 
 @mixin reset-p {
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }
+

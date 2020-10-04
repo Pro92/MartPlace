@@ -48,6 +48,7 @@
   font-display: swap;
 }
 
+
 .lnr-magic-wand:before {
 	content: "\e803";
 }
@@ -56,12 +57,36 @@
 	content: "\e80b";
 }
 
+.lnr-user:before {
+	content: "\e82a";
+}
+
+.lnr-home:before {
+	content: "\e800";
+}
+
 .lnr-lock:before {
 	content: "\e80f";
 }
 
 .lnr-chart-bars:before {
 	content: "\e843";
+}
+
+.lnr-star:before {
+	content: "\e814";
+}
+
+.lnr-book:before {
+	content: "\e828";
+}
+
+.lnr-exit:before {
+	content: "\e820";
+}
+
+.lnr-upload:before {
+	content: "\e866";
 }
 
 .lnr-heart:before {
@@ -126,6 +151,18 @@
 
 .lnr-clock:before {
 	content: "\e864";
+}
+
+.lnr-trash:before {
+	content: "\e811";
+}
+
+.lnr-dice:before {
+	content: "\e812";
+}
+
+.lnr-cog:before {
+	content: "\e810";
 }
 
 .lnr-eye:before {
